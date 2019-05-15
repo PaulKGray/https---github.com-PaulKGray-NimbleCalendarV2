@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NimbleCalandar.EntityFrameworkCore;
 
 namespace NimbleCalandar.Migrations
 {
     [DbContext(typeof(NimbleCalandarDbContext))]
-    partial class NimbleCalandarDbContextModelSnapshot : ModelSnapshot
+    [Migration("20190515203957_Add_Staff")]
+    partial class Add_Staff
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

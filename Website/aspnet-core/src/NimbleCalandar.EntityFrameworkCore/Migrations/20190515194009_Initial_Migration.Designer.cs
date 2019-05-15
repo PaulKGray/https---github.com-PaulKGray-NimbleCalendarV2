@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NimbleCalandar.EntityFrameworkCore;
 
 namespace NimbleCalandar.Migrations
 {
     [DbContext(typeof(NimbleCalandarDbContext))]
-    partial class NimbleCalandarDbContextModelSnapshot : ModelSnapshot
+    [Migration("20190515194009_Initial_Migration")]
+    partial class Initial_Migration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -1006,20 +1008,6 @@ namespace NimbleCalandar.Migrations
                     b.HasIndex("TenantId", "NormalizedUserName");
 
                     b.ToTable("AbpUsers");
-                });
-
-            modelBuilder.Entity("NimbleCalandar.Bookings.Staff", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("Name");
-
-                    b.Property<int>("TenantId");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Staff");
                 });
 
             modelBuilder.Entity("NimbleCalandar.MultiTenancy.Tenant", b =>
