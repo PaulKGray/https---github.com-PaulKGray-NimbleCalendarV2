@@ -7,8 +7,8 @@ using NimbleCalandar.Bookings;
 
 namespace NimbleCalandar.Booking
 {
-    [AbpAuthorize(PermissionNames.Pages_Staff)]
-    public class StaffService : AsyncCrudAppService<Staff, StaffDto, int, PagedStaffResultRequestDto, CreateStaffDto, StaffDto>, IStaffService
+    
+    public class StaffService : AsyncCrudAppService<Staff, StaffDto, int, PagedStaffResultRequestDto, CreateStaffDto, UpdateStaffDto>, IStaffService
     {
         private readonly IRepository<Staff, int> _staffRepository;
 

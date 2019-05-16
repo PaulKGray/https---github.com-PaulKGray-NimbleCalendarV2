@@ -3,7 +3,7 @@ using NimbleCalandar.Booking.Dto;
 
 namespace NimbleCalandar.Booking
 {
-    public interface IStaffService : IAsyncCrudAppService<StaffDto, int, PagedStaffResultRequestDto, CreateStaffDto, StaffDto>
+    public interface IStaffService : IAsyncCrudAppService<StaffDto, int, PagedStaffResultRequestDto, CreateStaffDto, UpdateStaffDto>
     {
     }
 }
