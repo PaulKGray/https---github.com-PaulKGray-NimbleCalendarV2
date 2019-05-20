@@ -67,6 +67,15 @@ export const appRouters: any = [
     component: LoadableComponent(() => import('src/scenes/Tenants')),
   },
   {
+    path: '/staff',
+    permission: 'Pages.Staff',
+    title: 'Staff',
+    name: 'staff',
+    icon: 'info-circle',
+    showInMenu: true,
+    component: LoadableComponent(() => import('src/scenes/Staff')),
+  },
+  {
     path: '/about',
     permission: '',
     title: 'About',
